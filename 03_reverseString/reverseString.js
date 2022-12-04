@@ -1,18 +1,19 @@
 const reverseString = function(str) {
-    let reverse_string, smaller_string = str; 
+    let reverse_string = "", smaller_string = str; 
     if (str == '') return '';
     
-    for (let i = 0; i < str.length; ++i){ 
-        reverse_string += smaller_string.slice(-1); 
-        smaller_string = str.slice(0, str.length - 1);  
-        str = smaller_string; 
+    for (let i = str.length - 1; i >= 0; --i){ 
+        reverse_string += str[i]; 
+        // smaller_string = str.slice(0, str.length - 1);  
+        // str = smaller_string; 
     } 
-    console.log(smaller_string);
+    // console.log(reverse_string);
     // console.log( reverse_string);
+    return reverse_string; 
 };
 
 
-reverseString("Hello"); 
+reverseString(""); 
 
 
 
