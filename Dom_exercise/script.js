@@ -80,21 +80,39 @@ const h3_new = document.createElement('h3');
 h3_new.textContent = "Do something crazy"; 
 container_2.appendChild(h3_new); 
 
+
+// container_2.appendChild(btn); 
+//feat: if appended: work, if not, the below line won't run
+
+const button_id = document.querySelector('button');
+button_id.onclick = () => alert("Hello world!"); 
 container_2.appendChild(btn); 
 
 
-const button_id = document.querySelector('#button');
-button_id.onClick = () => alert('Hello world!'); 
-container_2.appendChild(btn); 
+const button_biggie = document.querySelector('#biggie_button');
+button_biggie.addEventListener('click', () => { 
+    alert( "What thefuq?"); 
+
+});
 
 
 
+function damn_print_function(){
+    alert("Damn print function!"); 
+    
+}
 
 
 
+//* Damn print function will be printed
+button_id.onclick = damn_print_function; 
+button_biggie.addEventListener('click', damn_print_function); 
 
 
-
+//* Testing out btn
+button_id.addEventListener('click', function (e) {
+    e.target.style.backgroundColor = 'blue';
+  });
 
 
 
