@@ -1,5 +1,11 @@
 const sumAll = function(n, m) {
-    let sum = 0; 
+    if (n < 0 || m < 0 || typeof(n) != 'number' || typeof(m) != 'number') return "ERROR"; 
+    
+    let sum = 0, larger_num = m, smaller_num = n;
+    if (m < n){
+        n = larger_num;
+        m = smaller_num; 
+    }
     for (let i = n; i <= m; ++i ){ 
         sum += i; 
     }
